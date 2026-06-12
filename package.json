@@ -1,42 +1,41 @@
 {
-  "name": "doclang-preview",
+  "name": "@arun-prabhakar/doclang-preview",
   "version": "0.1.0",
   "description": "TypeScript library for previewing DocLang XML documents — works with React and Angular",
-  "main": "./dist/core/index.cjs",
-  "module": "./dist/core/index.js",
+  "main": "./dist/core/index.js",
+  "module": "./dist/core/index.mjs",
   "types": "./dist/core/index.d.ts",
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/core/index.d.ts",
-        "default": "./dist/core/index.js"
+        "types": "./dist/core/index.d.mts",
+        "default": "./dist/core/index.mjs"
       },
       "require": {
-        "types": "./dist/core/index.d.cts",
-        "default": "./dist/core/index.cjs"
+        "types": "./dist/core/index.d.ts",
+        "default": "./dist/core/index.js"
       }
     },
     "./react": {
       "import": {
-        "types": "./dist/react/index.d.ts",
-        "default": "./dist/react/index.js"
+        "types": "./dist/react/index.d.mts",
+        "default": "./dist/react/index.mjs"
       },
       "require": {
-        "types": "./dist/react/index.d.cts",
-        "default": "./dist/react/index.cjs"
+        "types": "./dist/react/index.d.ts",
+        "default": "./dist/react/index.js"
       }
     },
     "./angular": {
       "import": {
-        "types": "./dist/angular/index.d.ts",
-        "default": "./dist/angular/index.js"
+        "types": "./dist/angular/index.d.mts",
+        "default": "./dist/angular/index.mjs"
       },
       "require": {
-        "types": "./dist/angular/index.d.cts",
-        "default": "./dist/angular/index.cjs"
+        "types": "./dist/angular/index.d.ts",
+        "default": "./dist/angular/index.js"
       }
-    },
-    "./styles.css": "./dist/core/styles.css"
+    }
   },
   "files": [
     "dist"
@@ -48,7 +47,15 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arun-prabhakar/doclang-preview.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
@@ -88,5 +95,9 @@
     "document",
     "ai"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/arun-prabhakar/doclang-preview#readme",
+  "bugs": {
+    "url": "https://github.com/arun-prabhakar/doclang-preview/issues"
+  }
 }
