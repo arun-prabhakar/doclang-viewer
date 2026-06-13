@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { DocLangPreviewComponent } from './doclang-preview.component';
+import { DocLangPreviewComponent } from './doclang-viewer.component';
 
 @NgModule({
   imports: [DocLangPreviewComponent],

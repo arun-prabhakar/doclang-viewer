@@ -4,7 +4,7 @@ export default defineConfig([
   {
     entry: ["src/core/index.ts"],
     outDir: "dist/core",
-    name: "doclang-preview",
+    name: "doclang-viewer",
     format: ["esm", "cjs"],
     dts: true,
     clean: true,
@@ -14,7 +14,7 @@ export default defineConfig([
   {
     entry: ["src/react/index.ts"],
     outDir: "dist/react",
-    name: "doclang-preview-react",
+    name: "doclang-viewer-react",
     format: ["esm", "cjs"],
     dts: true,
     clean: true,
@@ -25,7 +25,7 @@ export default defineConfig([
   {
     entry: ["src/angular/index.ts"],
     outDir: "dist/angular",
-    name: "doclang-preview-angular",
+    name: "doclang-viewer-angular",
     format: ["esm", "cjs"],
     dts: true,
     clean: true,

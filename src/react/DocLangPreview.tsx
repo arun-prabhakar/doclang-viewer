@@ -15,7 +15,7 @@ export interface DocLangPreviewProps {
   customStyles?: string;
 }
 
-const STYLE_ID = "doclang-preview-css";
+const STYLE_ID = "doclang-viewer-css";
 
 function vnodeToReact(vnode: VNode): React.ReactNode {
   const { tag, props, children } = vnode;
@@ -100,8 +100,8 @@ export const DocLangPreview: React.FC<DocLangPreviewProps> = ({
   }, [xml]);
 
   const containerClassName = [
-    "doclang-preview",
-    showBoundingBoxes ? "doclang-preview--show-bounding-boxes" : "",
+    "doclang-viewer",
+    showBoundingBoxes ? "doclang-viewer--show-bounding-boxes" : "",
     className ?? "",
   ]
     .filter(Boolean)

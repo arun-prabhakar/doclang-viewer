@@ -11,11 +11,11 @@ import { previewDocLang } from '../core/index';
 import { RenderOutput } from '../core/types';
 
 @Component({
-  selector: 'doclang-preview',
+  selector: 'doclang-viewer',
   standalone: true,
   template: `
     <div
-      class="doclang-preview"
+      class="doclang-viewer"
       [innerHTML]="renderedHtml"
       [class.show-bounding-boxes]="showBoundingBoxes"
     ></div>
@@ -49,7 +49,7 @@ export class DocLangPreviewComponent implements OnChanges {
   private render(): void {
     if (!this.xml || this.xml.trim().length === 0) {
       this.renderedHtml = this.sanitizer.bypassSecurityTrustHtml(
-        '<div class="doclang-preview-empty"></div>',
+        '<div class="doclang-viewer-empty"></div>',
       );
       this.styles = this.sanitizer.bypassSecurityTrustHtml(this.buildCssString(''));
       this.cdr.markForCheck();
@@ -64,7 +64,7 @@ export class DocLangPreviewComponent implements OnChanges {
       const message =
         error instanceof Error ? error.message : String(error);
       this.renderedHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<div class="doclang-preview-error">Failed to render DocLang: ${this.escapeHtml(message)}</div>`,
+        `<div class="doclang-viewer-error">Failed to render DocLang: ${this.escapeHtml(message)}</div>`,
       );
       this.styles = this.sanitizer.bypassSecurityTrustHtml(this.buildCssString(''));
       this.cdr.markForCheck();
@@ -87,7 +87,7 @@ export class DocLangPreviewComponent implements OnChanges {
 
     if (this.showBoundingBoxes) {
       parts.push(`
-        .doclang-preview [data-bounding-box] {
+        .doclang-viewer [data-bounding-box] {
           outline: 1px dashed rgba(255, 0, 0, 0.5);
           background-color: rgba(255, 0, 0, 0.05);
         }

@@ -18,9 +18,9 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@doclang-preview/core": ["src/core"],
-      "@doclang-preview/react": ["src/react"],
-      "@doclang-preview/angular": ["src/angular"]
+      "@doclang-viewer/core": ["src/core"],
+      "@doclang-viewer/react": ["src/react"],
+      "@doclang-viewer/angular": ["src/angular"]
     }
   },
   "include": ["src"],

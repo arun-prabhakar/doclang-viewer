@@ -1,5 +1,5 @@
 {
-  "name": "@arun-prabhakar/doclang-preview",
+  "name": "@arun-prabhakar/doclang-viewer",
   "version": "0.1.0",
   "description": "TypeScript library for previewing DocLang XML documents — works with React and Angular",
   "main": "./dist/core/index.js",
@@ -52,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arun-prabhakar/doclang-preview.git"
+    "url": "git+https://github.com/arun-prabhakar/doclang-viewer.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -96,8 +96,8 @@
     "ai"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/arun-prabhakar/doclang-preview#readme",
+  "homepage": "https://github.com/arun-prabhakar/doclang-viewer#readme",
   "bugs": {
-    "url": "https://github.com/arun-prabhakar/doclang-preview/issues"
+    "url": "https://github.com/arun-prabhakar/doclang-viewer/issues"
   }
 }
