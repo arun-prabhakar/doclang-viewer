@@ -54,9 +54,6 @@
     "type": "git",
     "url": "git+https://github.com/arun-prabhakar/doclang-viewer.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
     "react": ">=17.0.0",
